@@ -17,7 +17,7 @@ interface ItemData {
   };
 }
 
-type NavigationProps = ComponentProps & {
+export type NavigationProps = ComponentProps & {
   fields: {
     items: ItemData[];
     rendering?: ComponentRendering;

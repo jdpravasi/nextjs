@@ -179,13 +179,19 @@ const Products = (props: Propstype) => {
                   <strong> Review:</strong> {product.productRatings}
                 </p>
                 {product.id && (
+                  // <Link
+                  //   className="btn btn-primary text-white"
+                  //   href={{
+                  //     pathname: '/Products/ProductDetail/',
+                  //     query: { id: product.id },
+                  //   }}
+                  //   as={`/Products/ProductDetail/${product.id}`}
+                  // >
+                  //   Details
+                  // </Link>
                   <Link
                     className="btn btn-primary text-white"
-                    href={{
-                      pathname: '/Products/ProductDetail/',
-                      query: { id: product.id },
-                    }}
-                    as={`/Products/ProductDetail/${product.id}`}
+                    href={'/Products/ProductDetail/' + product.id}
                   >
                     Details
                   </Link>
