@@ -15,48 +15,11 @@ const ProductSlug = () => {
   const router = useRouter();
   const params = useParams();
   console.log('Params:', params);
-  debugger;
   const { path } = router.query;
   const id = path ? path[path.length - 1] : null;
 
   const [data, setData] = useState<ProductType>();
   const [loading, setLoading] = useState(true);
-  // const [navigationData, setNavigationData] = useState([]);
-
-  // useEffect(() => {
-  //   if (id) {
-  //     const FetchProduct = async () => {
-  //       try {
-  //         const response = await fetch(`https://localhost:7189/Product/GetProductByID/${id}`);
-  //         const data = await response.json();
-  //         setData(data);
-  //         setLoading(false);
-  //         console.log('Product Data:', data);
-  //       } catch (error) {
-  //         console.error('Error Fetching Product:', error);
-  //         setLoading(false);
-  //       }
-  //     };
-
-  //     // const fetchNavigationData = async () => {
-  //     //   try {
-  //     //     debugger;
-  //     //     const layoutServiceUrl = `https://sv103sc.dev.local/sitecore/api/layout/render/jss?item={5288D54B-295E-5FED-9225-D9A08F763234}&sc_apikey={36DDD5C0-2D52-488E-8DA3-48D8CDA16158}&sc_children=true`;
-  //     //     const res = await fetch(layoutServiceUrl);
-  //     //     const data = await res.json();
-  //     //     console.log('Navigation Data:', data);
-  //     //     const finalData = data.sitecore.route.placeholders['jss-header'][0].fields.items;
-  //     //     console.log('Final data', finalData);
-  //     //     setNavigationData(finalData);
-  //     //   } catch (error) {
-  //     //     console.error('Error fetching navigation data:', error);
-  //     //   }
-  //     // };
-
-  //     // fetchNavigationData();
-  //     FetchProduct();
-  //   }
-  // }, [id]);
 
   useEffect(() => {
     if (id) {

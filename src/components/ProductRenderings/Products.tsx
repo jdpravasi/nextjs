@@ -47,6 +47,7 @@ const Products = (props: Propstype) => {
           const response = await fetch('https://localhost:7189/Product/GetProducts');
           const data = await response.json();
           dispatch(setProducts(data));
+          console.log('Products:', data);
           setLoading(false);
         } catch (error) {
           console.error('Error Fetching Products:', error);
